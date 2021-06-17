@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+   <h1>campaign list!!!</h1><br/><br/>
+ <form method="POST" action="{% url 'join' %}">
+   {% csrf_token %}
+   <div class="form-group">
+   <label for="exampleInputEmail1">Campaign name</label>
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="campaign name" name='fname' value={{fname}}>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">subject</label>
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="subject name" name='lname' value={{lname}}>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">total users</label>
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Age" name='total users' value={{email}}>
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="passwd">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
